@@ -12,8 +12,8 @@ This document tracks functionality, bug reports, feature requests and their deve
 
 ## Status guide
 
-| Status | Meaning |
-|---|---|
+| Status | Badge | Meaning |
+|---|---|---|
 | Implemented | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | Functionality is present in the latest merged `main` branch |
 | Reported | ![Reported](https://img.shields.io/badge/Reported-DC3545) | A bug has been reported and requires investigation |
 | Requested | ![Requested](https://img.shields.io/badge/Requested-FFD700) | A new feature or improvement has been suggested |
