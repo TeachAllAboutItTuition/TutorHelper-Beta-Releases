@@ -14,12 +14,12 @@ This document tracks functionality, bug reports, feature requests and their deve
 
 | Status | Meaning |
 |---|---|
-| Implemented | Functionality is present in the latest merged `main` branch |
-| Reported | A bug has been reported and requires investigation |
-| Requested | A new feature or improvement has been suggested |
-| Testing | A fix is being verified |
-| Complete | Implementation has been merged and verified |
-| Deferred | Planned for a later development batch |
+| Implemented | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | Functionality is present in the latest merged `main` branch |
+| Reported | ![Reported](https://img.shields.io/badge/Reported-DC3545) | A bug has been reported and requires investigation |
+| Requested | ![Requested](https://img.shields.io/badge/Requested-FFD700) | A new feature or improvement has been suggested |
+| Testing | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | A fix is being verified |
+| Complete | ![Complete](https://img.shields.io/badge/Complete-28A745) | Implementation has been merged and verified |
+| Deferred | ![Deferred](https://img.shields.io/badge/Deferred-6C757D) | Planned for a later development batch |
 
 **Priorities:** P1 = High, P2 = Medium, P3 = Low.
 
@@ -31,13 +31,13 @@ This document tracks functionality, bug reports, feature requests and their deve
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| BC-001 | Tutor availability and exclusions | Feature | Implemented | — | Availability calendar, booking restrictions and date exclusions |
-| BC-002 | Booking types | Feature | Implemented | — | Manage different lesson types and booking options |
-| BC-003 | Student booking interface | Feature | Implemented | — | Student-facing booking experience and availability |
-| BC-004 | Student dashboard | Feature | Implemented | — | Booking information, account controls and lesson access |
-| BC-005 | Booking Hub | Feature | Implemented | — | Tutor administration and booking management |
-| BC-006 | Student and parent account relationships | Feature | Implemented | — | Canonical parent/student links used by add-ons |
-| BC-007 | Tutor reporting dashboard | Feature | Implemented | — | Core reporting and booking analytics |
+| BC-001 | Tutor availability and exclusions | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Availability calendar, booking restrictions and date exclusions |
+| BC-002 | Booking types | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Manage different lesson types and booking options |
+| BC-003 | Student booking interface | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Student-facing booking experience and availability |
+| BC-004 | Student dashboard | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Booking information, account controls and lesson access |
+| BC-005 | Booking Hub | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Tutor administration and booking management |
+| BC-006 | Student and parent account relationships | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Canonical parent/student links used by add-ons |
+| BC-007 | Tutor reporting dashboard | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Core reporting and booking analytics |
 | BC-008 | Cross-plugin student details integration | Testing | Testing | P2 | Confirm LMS enrolments and Pro extensions remain compatible |
 
 ---
@@ -46,15 +46,15 @@ This document tracks functionality, bug reports, feature requests and their deve
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| BP-001 | Finance management | Feature | Implemented | — | Payment ledger, finance records and adjustments |
-| BP-002 | Stripe payments and refunds | Feature | Implemented | — | Payment and refund integration |
-| BP-003 | Tutor-issued account credit | Feature | Implemented | — | Credit allocation and refund recording |
-| BP-004 | Tutor financial statements | Feature | Implemented | — | PDF statement generation |
-| BP-005 | Recurring bookings | Feature | Implemented | — | Recurring lesson and booking management |
-| BP-006 | Attendance tracking | Feature | Implemented | — | Tutor records lesson attendance |
-| BP-007 | Lesson follow-up and homework setting | Feature | Implemented | — | Homework and feedback associated with lessons |
-| BP-008 | Student notes and communications | Feature | Implemented | — | Student history and communication tools |
-| BP-009 | Progress reporting | Feature | Implemented | — | Student reporting and feedback |
+| BP-001 | Finance management | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF)| — | Payment ledger, finance records and adjustments |
+| BP-002 | Stripe payments and refunds | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Payment and refund integration |
+| BP-003 | Tutor-issued account credit | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Credit allocation and refund recording |
+| BP-004 | Tutor financial statements | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | PDF statement generation |
+| BP-005 | Recurring bookings | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Recurring lesson and booking management |
+| BP-006 | Attendance tracking | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Tutor records lesson attendance |
+| BP-007 | Lesson follow-up and homework setting | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Homework and feedback associated with lessons |
+| BP-008 | Student notes and communications | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Student history and communication tools |
+| BP-009 | Progress reporting | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Student reporting and feedback |
 | BP-010 | Account-credit and refund reconciliation | Regression | Testing | P1 | Verify balances and statuses after credit/refund transactions |
 | BP-011 | Homework maximum marks passed to LMS | Bug / Integration | Reported | P2 | Tester reports that the marks available for homework do not appear in the LMS marking interface; see LP-007 |
 
@@ -64,13 +64,13 @@ This document tracks functionality, bug reports, feature requests and their deve
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| LC-001 | Learning Hub | Feature | Implemented | — | Learning content management |
-| LC-002 | Levels, Subjects, Courses and Topics | Feature | Implemented | — | Reusable academic structures |
-| LC-003 | Lesson Builder | Feature | Implemented | — | Lesson content and learning resources |
-| LC-004 | Reusable Question Bank | Feature | Implemented | — | Questions and immutable versions |
-| LC-005 | Quiz Builder | Feature | Implemented | — | Reusable Quizzes with ordered Questions |
-| LC-006 | Quiz attempts and automatic marking | Feature | Implemented | — | Objective attempts, saved answers and results |
-| LC-007 | Import Preview | Feature | Implemented | — | CSV/JSON preview and import infrastructure; full LearnDash execution remains a separate development workstream |
+| LC-001 | Learning Hub | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Learning content management |
+| LC-002 | Levels, Subjects, Courses and Topics | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Reusable academic structures |
+| LC-003 | Lesson Builder | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Lesson content and learning resources |
+| LC-004 | Reusable Question Bank | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Questions and immutable versions |
+| LC-005 | Quiz Builder | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Reusable Quizzes with ordered Questions |
+| LC-006 | Quiz attempts and automatic marking | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Objective attempts, saved answers and results |
+| LC-007 | Import Preview | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | CSV/JSON preview and import infrastructure; full LearnDash execution remains a separate development workstream |
 | LC-008 | Preserve Course Builder position when saving | Feature Request | Requested | P2 | Saving or adding Lesson/Topic content should refresh only the affected section, not reload the entire page |
 | LC-009 | Custom learner-facing Quiz labels | Feature Request | Requested | P2 | Allow tutor to choose Quiz, Assignment, Mock Exam, Exam or a custom title |
 | LC-010 | Learning Hub enrolled-student count | Bug | Reported | P1 | Students enrolled via Booking Hub Student Details do not appear in the Learning Hub Students card or tab |
@@ -146,11 +146,11 @@ The following issues and requests were identified.
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| LP-001 | Homework file submissions | Feature | Implemented | — | Student submissions with protected file storage |
-| LP-002 | Tutor homework marking | Feature | Implemented | — | Marks, feedback and submission status |
-| LP-003 | PDF annotations | Feature | Implemented | — | Pen, stamps, multi-page editor and saved annotations |
-| LP-004 | Image annotations | Feature | Implemented | — | Image marking with pen and stamps |
-| LP-005 | Marked PDF/image storage | Feature | Implemented | — | Protected marked-file derivative generation and delivery |
+| LP-001 | Homework file submissions | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Student submissions with protected file storage |
+| LP-002 | Tutor homework marking | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Marks, feedback and submission status |
+| LP-003 | PDF annotations | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Pen, stamps, multi-page editor and saved annotations |
+| LP-004 | Image annotations | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Image marking with pen and stamps |
+| LP-005 | Marked PDF/image storage | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Protected marked-file derivative generation and delivery |
 | LP-006 | **Marked PDF rejected on save/release** | Bug | Reported | **P1** | Displays "The marked file could not be accepted" |
 | LP-007 | **Homework maximum marks missing** | Bug | Reported | P2 | Maximum marks from assigned homework not displayed |
 | LP-008 | **Marked image preview not updated** | Bug | Reported | **P1** | Annotations saved, but do not appear in the subsequent marking preview |
@@ -161,10 +161,10 @@ The following issues and requests were identified.
 | LP-013 | Straight-line / ruler tool | Feature Request | Requested | P2 | Draw lines for graphs, labels and lines of best fit |
 | LP-014 | Previous / Next submission navigation | Feature Request | Requested | P2 | Move between submissions after successful Save Marking |
 | LP-015 | Released marked PDF and original-file access | Regression | Testing | P1 | Verify flattened marked derivative and original download |
-| LP-016 | Adaptive Practice | Feature | Implemented | — | Mastery-based Question selection |
-| LP-017 | Timed Quizzes | Feature | Implemented | — | Timed Quiz delivery |
-| LP-018 | Premium written/file Questions | Feature | Implemented | — | Manual marking and feedback |
-| LP-019 | Gradebook and released feedback | Feature | Implemented | — | Academic progress and released assessment results |
+| LP-016 | Adaptive Practice | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Mastery-based Question selection |
+| LP-017 | Timed Quizzes | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Timed Quiz delivery |
+| LP-018 | Premium written/file Questions | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Manual marking and feedback |
+| LP-019 | Gradebook and released feedback | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Academic progress and released assessment results |
 
 ### LP-006 — Marked file could not be accepted
 
@@ -299,14 +299,14 @@ Navigation should:
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| GB-001 | Group Lesson blocks | Feature | Implemented | — | Reusable scheduled group sessions |
-| GB-002 | Student group enrolment | Feature | Implemented | — | Group membership and enrolment management |
-| GB-003 | Group lesson bookings | Feature | Implemented | — | Linked individual Core bookings |
-| GB-004 | Group pricing and deposits | Feature | Implemented | — | Upfront, deposit and manual payments |
-| GB-005 | Group Stripe payments | Feature | Implemented | — | Group checkout and balance collection |
-| GB-006 | Group finance reconciliation | Feature | Implemented | — | Credits, refunds and payment-state updates |
-| GB-007 | Shared group calendar events | Feature | Implemented | — | Shared joining links and session management |
-| GB-008 | Group attendance | Feature | Implemented | — | Per-student attendance recording |
+| GB-001 | Group Lesson blocks | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Reusable scheduled group sessions |
+| GB-002 | Student group enrolment | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Group membership and enrolment management |
+| GB-003 | Group lesson bookings | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Linked individual Core bookings |
+| GB-004 | Group pricing and deposits | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Upfront, deposit and manual payments |
+| GB-005 | Group Stripe payments | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Group checkout and balance collection |
+| GB-006 | Group finance reconciliation | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Credits, refunds and payment-state updates |
+| GB-007 | Shared group calendar events | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Shared joining links and session management |
+| GB-008 | Group attendance | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Per-student attendance recording |
 | GB-009 | Student cancellation and rescheduling | Feature Request | Requested | P2 | Identified in repository roadmap as unfinished |
 | GB-010 | Finance reversal regression tests | Regression | Testing | P1 | Verify refunded/credited bookings update enrolment balances and place state |
 
@@ -316,12 +316,12 @@ Navigation should:
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| PC-001 | Parent/student relationships | Feature | Implemented | — | Multiple parents and students supported |
-| PC-002 | Parent Accounts administration | Feature | Implemented | — | Manage linked parents |
-| PC-003 | Parent dashboard | Feature | Implemented | — | Parent-specific dashboard and child selection |
-| PC-004 | Attendance and lesson history | Feature | Implemented | — | Read-only reporting |
-| PC-005 | Feedback and homework view | Feature | Implemented | — | Parent visibility of tutor follow-up |
-| PC-006 | Parent finance dashboard | Feature | Implemented | — | Statements, invoices and payment options |
+| PC-001 | Parent/student relationships | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Multiple parents and students supported |
+| PC-002 | Parent Accounts administration | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Manage linked parents |
+| PC-003 | Parent dashboard | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Parent-specific dashboard and child selection |
+| PC-004 | Attendance and lesson history | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Read-only reporting |
+| PC-005 | Feedback and homework view | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Parent visibility of tutor follow-up |
+| PC-006 | Parent finance dashboard | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Statements, invoices and payment options |
 | PC-007 | Account-credit refund request | Regression | Testing | P2 | Verify that parents can request refunds from their dashboard and tutors can process requests correctly |
 | PC-008 | Financial visibility settings | Regression | Testing | P2 | Confirm parent-only finance visibility and credited lesson transactions |
 | PC-009 | Delegated parent booking actions | Feature Request | Requested | P3 | Future parent cancellation/rescheduling and booking permissions |
@@ -332,11 +332,11 @@ Navigation should:
 
 | ID | Feature / Request | Type | Status | Priority | Notes |
 |---|---|---|---|---|---|
-| AG-001 | Agency activation and licence | Feature | Implemented | — | Dependency and licensing system |
-| AG-002 | TH Tutor role | Feature | Implemented | — | Restricted tutor permissions |
-| AG-003 | Tutor/student assignments | Feature | Implemented | — | Many-to-many assignment relationships |
-| AG-004 | Agency administration | Feature | Implemented | — | Administrators assign tutors and students |
-| AG-005 | Tutor Hub | Feature | Implemented | — | Read-only assigned-student dashboard |
+| AG-001 | Agency activation and licence | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Dependency and licensing system |
+| AG-002 | TH Tutor role | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Restricted tutor permissions |
+| AG-003 | Tutor/student assignments | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Many-to-many assignment relationships |
+| AG-004 | Agency administration | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Administrators assign tutors and students |
+| AG-005 | Tutor Hub | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Read-only assigned-student dashboard |
 | AG-006 | Tutor Hub booking management | Feature Request | Requested | P2 | Future booking and calendar tools |
 | AG-007 | Tutor Hub student management | Feature Request | Requested | P2 | Future assigned-student editing and reporting |
 | AG-008 | Multi-tutor booking permissions | Regression | Testing | P1 | Confirm Core tutor resolver permits authorised TH Tutor bookings without exposing unrelated records |
@@ -344,7 +344,7 @@ Navigation should:
 
 ---
 
-## 8. Recommended development priorities
+## 8. Current development priorities
 
 | Priority order | Issue IDs | Development focus |
 |---|---|---|
@@ -359,7 +359,7 @@ Navigation should:
 | 9 | LP-012, LP-013, LP-014 | Annotation tool and navigation enhancements |
 | 10 | Other regression rows | Cross-plugin beta verification |
 
-The LMS LearnDash migration and Learning Journey work should continue to be managed through the separate **TutorHelper LMS Development Tracker**, with issues cross-referenced here where relevant.
+The LMS LearnDash migration and Learning Journey work is continuing to be managed through a separate **TutorHelper LMS Development Tracker**, for initial development, but beta tester feedback will be added here as the main LMS features are released.
 
 ---
 
@@ -375,7 +375,7 @@ Please email **holly@teachallaboutit.uk** with:
 6. Screenshot, if useful.
 7. Device/browser and WordPress/PHP versions, if known.
 
-Please remove student names, personal information, licence keys and confidential files from screenshots or logs before sharing them.
+Please **remove student names, personal information, licence keys and confidential files** from screenshots or logs *before* sharing them.
 
 ### How the tracker is maintained
 
