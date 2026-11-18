@@ -38,7 +38,7 @@ This document tracks functionality, bug reports, feature requests and their deve
 | BC-005 | Booking Hub | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Tutor administration and booking management |
 | BC-006 | Student and parent account relationships | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Canonical parent/student links used by add-ons |
 | BC-007 | Tutor reporting dashboard | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Core reporting and booking analytics |
-| BC-008 | Cross-plugin student details integration | Testing | Testing | P2 | Confirm LMS enrolments and Pro extensions remain compatible |
+| BC-008 | Cross-plugin student details integration | Testing | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P2 | Confirm LMS enrolments and Pro extensions remain compatible |
 
 ---
 
@@ -55,8 +55,8 @@ This document tracks functionality, bug reports, feature requests and their deve
 | BP-007 | Lesson follow-up and homework setting | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Homework and feedback associated with lessons |
 | BP-008 | Student notes and communications | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Student history and communication tools |
 | BP-009 | Progress reporting | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Student reporting and feedback |
-| BP-010 | Account-credit and refund reconciliation | Regression | Testing | P1 | Verify balances and statuses after credit/refund transactions |
-| BP-011 | Homework maximum marks passed to LMS | Bug / Integration | Reported | P2 | Tester reports that the marks available for homework do not appear in the LMS marking interface; see LP-007 |
+| BP-010 | Account-credit and refund reconciliation | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Verify balances and statuses after credit/refund transactions |
+| BP-011 | Homework maximum marks passed to LMS | Bug / Integration | ![Reported](https://img.shields.io/badge/Reported-DC3545) | P2 | Tester reports that the marks available for homework do not appear in the LMS marking interface; see LP-007 |
 
 ---
 
@@ -71,12 +71,12 @@ This document tracks functionality, bug reports, feature requests and their deve
 | LC-005 | Quiz Builder | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Reusable Quizzes with ordered Questions |
 | LC-006 | Quiz attempts and automatic marking | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Objective attempts, saved answers and results |
 | LC-007 | Import Preview | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | CSV/JSON preview and import infrastructure; full LearnDash execution remains a separate development workstream |
-| LC-008 | Preserve Course Builder position when saving | Feature Request | Requested | P2 | Saving or adding Lesson/Topic content should refresh only the affected section, not reload the entire page |
-| LC-009 | Custom learner-facing Quiz labels | Feature Request | Requested | P2 | Allow tutor to choose Quiz, Assignment, Mock Exam, Exam or a custom title |
-| LC-010 | Learning Hub enrolled-student count | Bug | Reported | P1 | Students enrolled via Booking Hub Student Details do not appear in the Learning Hub Students card or tab |
-| LC-011 | H5P interactive lesson activities | Feature Request | Requested | P2 | Support embedded interactive activities within Lessons without treating them as LMS Quizzes |
-| LC-012 | LearnDash image-based Question import | Feature Request | Requested | P1 | Preserve images in Question text and answers, including image-to-image Matching Pairs |
-| LC-013 | Historical Quiz attempt integrity | Regression | Testing | P1 | Verify editing a Question does not change previously completed attempts |
+| LC-008 | Preserve Course Builder position when saving | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Saving or adding Lesson/Topic content should refresh only the affected section, not reload the entire page |
+| LC-009 | Custom learner-facing Quiz labels | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Allow tutor to choose Quiz, Assignment, Mock Exam, Exam or a custom title |
+| LC-010 | Learning Hub enrolled-student count | Bug | ![Reported](https://img.shields.io/badge/Reported-DC3545) | P1 | Students enrolled via Booking Hub Student Details do not appear in the Learning Hub Students card or tab |
+| LC-011 | H5P interactive lesson activities | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Support embedded interactive activities within Lessons without treating them as LMS Quizzes |
+| LC-012 | LearnDash image-based Question import | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P1 | Preserve images in Question text and answers, including image-to-image Matching Pairs |
+| LC-013 | Historical Quiz attempt integrity | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Verify editing a Question does not change previously completed attempts |
 
 ### LC-008 — Course Builder partial refresh
 
@@ -151,16 +151,16 @@ The following issues and requests were identified.
 | LP-003 | PDF annotations | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Pen, stamps, multi-page editor and saved annotations |
 | LP-004 | Image annotations | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Image marking with pen and stamps |
 | LP-005 | Marked PDF/image storage | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Protected marked-file derivative generation and delivery |
-| LP-006 | **Marked PDF rejected on save/release** | Bug | Reported | **P1** | Displays "The marked file could not be accepted" |
-| LP-007 | **Homework maximum marks missing** | Bug | Reported | P2 | Maximum marks from assigned homework not displayed |
-| LP-008 | **Marked image preview not updated** | Bug | Reported | **P1** | Annotations saved, but do not appear in the subsequent marking preview |
-| LP-009 | Preview every PDF page by scrolling | Feature Request | Requested | P2 | Preview currently renders the first page only |
-| LP-010 | Open homework in enlarged/fullscreen view | Feature Request | Requested | P2 | Larger marking workspace should be available from initial opening |
-| LP-011 | Redo last annotation | Feature Request | Requested | P2 | Confirm intended behaviour; existing code already includes Undo last for PDF and image |
-| LP-012 | Custom stamp colours | Feature Request | Requested | P3 | Allow changing stamp colours independently of pen colour |
-| LP-013 | Straight-line / ruler tool | Feature Request | Requested | P2 | Draw lines for graphs, labels and lines of best fit |
-| LP-014 | Previous / Next submission navigation | Feature Request | Requested | P2 | Move between submissions after successful Save Marking |
-| LP-015 | Released marked PDF and original-file access | Regression | Testing | P1 | Verify flattened marked derivative and original download |
+| LP-006 | **Marked PDF rejected on save/release** | Bug | ![Reported](https://img.shields.io/badge/Reported-DC3545) | **P1** | Displays "The marked file could not be accepted" |
+| LP-007 | **Homework maximum marks missing** | Bug | ![Reported](https://img.shields.io/badge/Reported-DC3545) | P2 | Maximum marks from assigned homework not displayed |
+| LP-008 | **Marked image preview not updated** | Bug | ![Reported](https://img.shields.io/badge/Reported-DC3545) | **P1** | Annotations saved, but do not appear in the subsequent marking preview |
+| LP-009 | Preview every PDF page by scrolling | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Preview currently renders the first page only |
+| LP-010 | Open homework in enlarged/fullscreen view | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Larger marking workspace should be available from initial opening |
+| LP-011 | Redo last annotation | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Confirm intended behaviour; existing code already includes Undo last for PDF and image |
+| LP-012 | Custom stamp colours | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P3 | Allow changing stamp colours independently of pen colour |
+| LP-013 | Straight-line / ruler tool | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Draw lines for graphs, labels and lines of best fit |
+| LP-014 | Previous / Next submission navigation | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Move between submissions after successful Save Marking |
+| LP-015 | Released marked PDF and original-file access | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Verify flattened marked derivative and original download |
 | LP-016 | Adaptive Practice | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Mastery-based Question selection |
 | LP-017 | Timed Quizzes | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Timed Quiz delivery |
 | LP-018 | Premium written/file Questions | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Manual marking and feedback |
@@ -307,8 +307,8 @@ Navigation should:
 | GB-006 | Group finance reconciliation | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Credits, refunds and payment-state updates |
 | GB-007 | Shared group calendar events | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Shared joining links and session management |
 | GB-008 | Group attendance | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Per-student attendance recording |
-| GB-009 | Student cancellation and rescheduling | Feature Request | Requested | P2 | Identified in repository roadmap as unfinished |
-| GB-010 | Finance reversal regression tests | Regression | Testing | P1 | Verify refunded/credited bookings update enrolment balances and place state |
+| GB-009 | Student cancellation and rescheduling | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Identified in repository roadmap as unfinished |
+| GB-010 | Finance reversal regression tests | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Verify refunded/credited bookings update enrolment balances and place state |
 
 ---
 
@@ -322,9 +322,9 @@ Navigation should:
 | PC-004 | Attendance and lesson history | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Read-only reporting |
 | PC-005 | Feedback and homework view | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Parent visibility of tutor follow-up |
 | PC-006 | Parent finance dashboard | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Statements, invoices and payment options |
-| PC-007 | Account-credit refund request | Regression | Testing | P2 | Verify that parents can request refunds from their dashboard and tutors can process requests correctly |
-| PC-008 | Financial visibility settings | Regression | Testing | P2 | Confirm parent-only finance visibility and credited lesson transactions |
-| PC-009 | Delegated parent booking actions | Feature Request | Requested | P3 | Future parent cancellation/rescheduling and booking permissions |
+| PC-007 | Account-credit refund request | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P2 | Verify that parents can request refunds from their dashboard and tutors can process requests correctly |
+| PC-008 | Financial visibility settings | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P2 | Confirm parent-only finance visibility and credited lesson transactions |
+| PC-009 | Delegated parent booking actions | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P3 | Future parent cancellation/rescheduling and booking permissions |
 
 ---
 
@@ -337,10 +337,10 @@ Navigation should:
 | AG-003 | Tutor/student assignments | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Many-to-many assignment relationships |
 | AG-004 | Agency administration | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Administrators assign tutors and students |
 | AG-005 | Tutor Hub | Feature | ![Implemented](https://img.shields.io/badge/Implemented-007BFF) | — | Read-only assigned-student dashboard |
-| AG-006 | Tutor Hub booking management | Feature Request | Requested | P2 | Future booking and calendar tools |
-| AG-007 | Tutor Hub student management | Feature Request | Requested | P2 | Future assigned-student editing and reporting |
-| AG-008 | Multi-tutor booking permissions | Regression | Testing | P1 | Confirm Core tutor resolver permits authorised TH Tutor bookings without exposing unrelated records |
-| AG-009 | Assignment-based access | Regression | Testing | P1 | Test permission checks, removed assignments and cross-tutor data access |
+| AG-006 | Tutor Hub booking management | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Future booking and calendar tools |
+| AG-007 | Tutor Hub student management | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Future assigned-student editing and reporting |
+| AG-008 | Multi-tutor booking permissions | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Confirm Core tutor resolver permits authorised TH Tutor bookings without exposing unrelated records |
+| AG-009 | Assignment-based access | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Test permission checks, removed assignments and cross-tutor data access |
 
 ---
 
