@@ -5,7 +5,7 @@ Welcome to the TutorHelper Beta Testing Programme!
 
 This document tracks functionality, bug reports, feature requests and their development progress across the TutorHelper plugin suite.
 
-**Last reviewed:** 18 November 2026  
+**Last reviewed:** 20 November 2026  
 **Contact:** holly@teachallaboutit.uk
 
 > **Important:** Bug fixes and security updates take priority over new features. Some requests affect several plugins and may require additional development and testing.
@@ -77,6 +77,38 @@ This document tracks functionality, bug reports, feature requests and their deve
 | LC-011 | H5P interactive lesson activities | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P2 | Support embedded interactive activities within Lessons without treating them as LMS Quizzes |
 | LC-012 | LearnDash image-based Question import | Feature Request | ![Requested](https://img.shields.io/badge/Requested-FFD700) | P1 | Preserve images in Question text and answers, including image-to-image Matching Pairs |
 | LC-013 | Historical Quiz attempt integrity | Regression | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | P1 | Verify editing a Question does not change previously completed attempts |
+| LC-014 | LearnDash Fill-in-the-Blanks/Cloze import fails audit for valid source syntax | Bug / Migration blocker | ![Reported](https://img.shields.io/badge/Reported-DC3545) | **P1** | Import Preview displays blue crosses when LearnDash embeds `{answer}` directly into the prompt; IM3 must parse and convert to TutorHelper's `{{1}}` placeholder model without losing text or content. |
+| LC-015 | Multiple accepted answers per Cloze gap | Feature Request / Compatibility | ![Requested](https://img.shields.io/badge/Requested-FFD700) | **P1** | Support LearnDash `{[love][hate]}` alternatives for a single gap; import, edit, deliver and automatically mark any accepted alternative. |
+| LC-016 | Configurable mark allocation per Cloze gap and alternative | Feature Request / Compatibility | ![Requested](https://img.shields.io/badge/Requested-FFD700) | **P1** | Preserve LearnDash `{play|2}` and weighted alternatives such as `{[love|2][hate|5]}` when the source scoring flags activate those semantics. Tutor should be able to review/override marks; update totals, marking and attempt snapshots. |
+| LC-017 | Scientific HTML and Unicode preservation in imported Questions and answers | Regression / Import compatibility | ![Testing](https://img.shields.io/badge/Testing-A8E6A3) | **P1** | Verify subscript, superscript, chemical equations, arrows, rich feedback and safe HTML survive preview correction, creation, editing, player and results. Do not treat HTML tags as gap syntax. |
+
+### LC-014 to LC-017 — Priority LearnDash Cloze and scientific-content migration
+
+**Reported:** 20 November 2026, by a beta tester importing a real LearnDash Biology Question export. **Development workstream:** existing IM3 (confirmed LearnDash Question import), with dependencies in IM1 (Question model/editor) and IM6 (regression).
+
+**Observed issue:** Import Preview correctly finds Question titles, prompts and maximum marks, but reports blue crosses in the *Fill-in placeholders `{{1}}`, `{{2}}` and matching blank answers* column. The preview correction currently presents the original LearnDash prompt in a field intended for blank answers. LearnDash embeds accepted text in single braces; TutorHelper currently expects numbered double-brace placeholders and a separate answer list.
+
+**LearnDash examples supplied by tester** (illustrative source syntax, not TutorHelper syntax):
+
+```text
+I {play} soccer.
+I {[love][hate]} soccer.
+I {play|2} soccer.
+I {[love|2][hate|5]} soccer.
+```
+
+**Required conversion and review:**
+
+1. Detect LearnDash Cloze tokens within Question HTML and convert each *gap* into `{{1}}`, `{{2}}`, etc. in its original position, while extracting accepted answers and keeping the complete surrounding prompt text.
+2. Preserve alternatives **within the same gap** instead of incorrectly creating multiple gaps. Provide tutor-facing preview/edit controls for answers and marks per gap; do not force tutors to hand-rewrite imported source prompts.
+3. Handle source mark values and answer-point modes according to **verified LearnDash 5.1.7 grading semantics**. Do not assume a per-answer weight is active simply because source text includes a number. If alternate correct answers can earn different scores, extend the answer/marking model or flag for explicit tutor approval rather than silently reducing it to one mark.
+4. Keep the existing TutorHelper-native `{{n}}` import format working, and maintain backward compatibility with previously saved Cloze Questions and historical attempt snapshots.
+5. Verify source and destination rich text, including `<sub>`, `<sup>`, entities, Unicode arrows and chemical formulae, survives HTML sanitisation, edit/save cycles, student rendering and feedback. Unsupported or ambiguous patterns remain **Draft / Needs Review** rather than being published incorrectly.
+6. Use the real tester's LearnDash export only as a **private** regression fixture. Add sanitised synthetic tests for single gaps, several gaps, multiple accepted answers, weighted variants, malformed braces, mixed HTML and repeats. No historical student attempts should be imported.
+
+**Acceptance tests:** A LearnDash Question such as `Animal cells have a {nucleus|1} that controls the cell and contains {DNA|1}.` previews as two correctly positioned gaps with the right answers and score, and no false missing-field cross; `{[love][hate]}` gives one gap with two valid answers; weighted alternatives are awarded exactly according to verified source semantics; scientific HTML remains rendered correctly. Re-import is idempotent.
+
+**Work instruction:** Update the existing **TutorHelper LMS Development Tracker** IM3 definition of done, its IM1 dependencies, IM6 tests, change log and decisions. Keep this beta-facing issue register aligned without claiming a fix until the PR is merged and sandbox-tested.
 
 ### LC-008 — Course Builder partial refresh
 
@@ -348,7 +380,8 @@ Navigation should:
 
 | Priority order | Issue IDs | Development focus |
 |---|---|---|
-| 1 | LP-006, LP-015 | Fix marked PDF acceptance and verify reliable release/storage |
+| **1 — migration blocker** | **LC-014, LC-015, LC-016, LC-017** | Correct LearnDash Cloze conversion, multiple accepted answers, verified marks and scientific HTML; integrate with IM3 before the tester's bulk Question import |
+| **1 — marking blocker** | **LP-006, LP-015** | Fix marked PDF acceptance and verify reliable release/storage; schedule in parallel or according to tester impact |
 | 2 | LP-008 | Fix image annotation preview after saving |
 | 3 | LC-010 | Fix Learning Hub enrolled-student counts and student list |
 | 4 | LP-007, BP-011 | Display configured homework maximum marks |
@@ -388,9 +421,9 @@ Please **remove student names, personal information, licence keys and confidenti
 
 ---
 
-## 10. GitHub source audit — 18 November 2026
+## 10. GitHub source audit — 20 November 2026
 
-The implementation baseline was checked against the latest available `main` branches:
+The implementation baseline was checked against the latest available `main` branches. The LMS branch was rechecked on 20 November; other plugin SHAs below are from the 18 November audit:
 
 | Repository | Main commit |
 |---|---|
@@ -399,7 +432,7 @@ The implementation baseline was checked against the latest available `main` bran
 | TutorHelper-Group-Bookings | `a0e53235` |
 | TutorHelper-Parent-Child | `d96c8d52` |
 | TutorHelper-Agency | `c5a67939` |
-| Tutorhelper-LMS Core and Premium | `f3c93140` |
+| Tutorhelper-LMS Core and Premium | `4c8f9ab7` |
 
 Source files provide evidence of implementation, not confirmation that every workflow works correctly in a live WordPress environment.
 
